@@ -1,0 +1,25 @@
+
+//عدد میگیرد کامل بودن یا نبودن را بررسی میکند
+
+package ex2;
+
+import java.util.Scanner;
+public class Ex2 {
+
+	public static void main(String[]args)
+	{
+		System.out.print("Enter a number:\t");
+		Scanner input = new Scanner(System.in);
+		int result = 1 , number = input.nextInt();
+		
+		for(int i = 2 ; i < number ; i++ )
+		{
+			if(number % i == 0)
+				result += i;
+		}
+		if(number == result)
+			System.out.printf("%d is complete", number);
+		else
+			System.out.printf("%d is not complete", number);
+	}
+}
